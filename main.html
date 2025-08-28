@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek Rohatgi - Traditional Hair Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3a5f7a;
+            --secondary: #7a5d3a;
+            --accent: #c99a5d;
+            --light: #f9f6f1;
+            --dark: #2c3e50;
+            --text: #444444;
+            --button: #fa04bc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 2000px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--button);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: left;
+            margin-bottom: 0px;
+            position: relative;
+            font-size: 30px;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+            margin: 0px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 0px;
+            margin-top: 20px;
+            font-size: large;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1722653491667-4a0bfdff5364?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 230px 0 100px;
+            margin-top: 0px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: rgb(252, 8, 191);
+            font-weight: bolder;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--light);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            background: linear-gradient(to right, #ffe6f0, #ffccdc);
+            border-radius: 10px;
+            padding: 30px 20px;
+            width: 30%;
+            min-width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: rgb(255, 0, 179);
+            margin-bottom: 10px;
+            display: block;
+            min-height: 70px;
+        }
+
+        .stat-text {
+            font-size: 1.2rem;
+            color: rgb(0, 0, 0);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            line-height: 2;
+            margin-top: 0px;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: justify;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .benefits-list li i {
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 1.5rem;
+            width: 30px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-hours {
+            text-align: center;
+            background: #ffe6f0;
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .service-item {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            padding-top: 70px;
+            margin-top: 40px;
+        }
+
+        /* First card - pink gradient */
+        .service-item:nth-child(1) {
+            background: linear-gradient(135deg, #fff2f2, #ffd4de);
+        }
+
+        /* Second card - blue gradient */
+        .service-item:nth-child(2) {
+            background: linear-gradient(135deg, #d2f5ff, #c6e0ff);
+        }
+
+        /* Third card - yellow/orange gradient */
+        .service-item:nth-child(3) {
+            background: linear-gradient(135deg, #ffeeb7, #fffead);
+        }
+
+        .service-title {
+            color: var(--primary);
+            margin: 20px 0;
+            font-size: 24px;
+            position: relative;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        /* Individual icon colors */
+        .service-item:nth-child(1) .service-icon {
+            background: linear-gradient(135deg, #ff9bb4, #ff6b9c);
+        }
+
+        .service-item:nth-child(2) .service-icon {
+            background: linear-gradient(135deg, #7bcdf0, #4ab8e7);
+        }
+
+        .service-item:nth-child(3) .service-icon {
+            background: linear-gradient(135deg, #ffd966, #ffc73b);
+        }
+
+        .service-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .service-features li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            break-inside: avoid;
+        }
+
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e91e63;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Package Banner */
+        .package-banner {
+            background: linear-gradient(135deg, #bebfff, #805cff);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .package-banner h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .package-banner p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Packages Section */
+        .packages-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding-top: 50px;
+        }
+
+        .package {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            padding: 0 0 30px 0;
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+        }
+
+        .package-header {
+            background: var(--primary);
+            color: white;
+            padding: 25px 20px;
+        }
+
+        .package-price {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 25px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .package-features li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .package-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .popular {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+
+        .popular-label {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            max-width: 280px;
+            padding: 25px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .features-footer {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .features-btn {
+            margin-top: 30px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding-top: 50px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .portfolio-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .portfolio-content p {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Video Portfolio Section */
+        .video-portfolio {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding-top: 50px;
+        }
+        
+        .video-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .video-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .video-content p {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .admin-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-top: 50px;
+            text-align: center;
+            display: none; /* Hidden by default */
+        }
+        
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        
+        .upload-btn {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background-color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .upload-status {
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        /* Admin Access Button */
+        .admin-access-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0.3;
+            transition: opacity 0.3s;
+        }
+        
+        .admin-access-btn:hover {
+            opacity: 1;
+        }
+        
+        /* Admin Login Modal */
+        .admin-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .admin-modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .admin-modal h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .admin-modal input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .admin-modal-actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #f9f9f9;
+        }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .testimonial {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text);
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .testimonial-button {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding-top: 50px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            text-align: left;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .contact-details {
+            list-style: none;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .contact-details li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details li i {
+            margin-right: 15px;
+            color: var(--accent);
+            font-size: 1.3rem;
+            width: 25px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .footer-services {
+            list-style: none;
+        }
+
+        .footer-services li {
+            margin-bottom: 10px;
+        }
+
+        .footer-services li:before {
+            content: "•";
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .service-features {
+                columns: 1;
+            }
+            
+            .stat-item {
+                width: 45%;
+            }
+            
+            .video-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .package {
+                min-width: 100%;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💇‍♂️</text></svg>">
+</head>
+<body>
+    <!-- Admin Access Button (Hidden in corner) -->
+    <div class="admin-access-btn" id="admin-access-btn" title="Admin Access">
+        <i class="fas fa-lock"></i>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="admin-modal" id="admin-modal">
+        <div class="admin-modal-content">
+            <h3>Admin Access</h3>
+            <input type="password" id="admin-password" placeholder="Enter admin password">
+            <div class="admin-modal-actions">
+                <button class="btn" onclick="checkAdminPassword()">Login</button>
+                <button class="btn" style="background: #ccc;" onclick="closeAdminModal()">Cancel</button>
+            </div>
+            <p id="admin-login-status" style="margin-top: 15px; color: #ff4757; font-size: 14px;"></p>
+            
+            <!-- Secret access methods -->
+            <div style="margin-top: 20px; font-size: 12px; color: #888;">
+                <p>Secret access: Add <strong>?admin=true</strong> to URL</p>
+                <p>Or press <strong>Ctrl+Shift+A</strong> anywhere on the page</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Prateek<span> Rohatgi</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#video-portfolio">Videos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Traditional Hair Care</h1>
+            <h2>At Your Doorstep</h2>
+            <p>Professional male hair care specialist providing traditional treatments for women. Home visits and outdoor consultations available. 2+ years of experience with time-tested remedies for hair fall, dandruff, and split ends.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Book Consultation</a>
+                <a href="#services" class="btn">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span>
+                    <div class="stat-text">Hair Surveys Completed</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="150">0</span>
+                    <div>Professional Consultations</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <div>Head Massages</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <p style="font-size:40px; font-weight:bold; line-height:1.2; margin:0;">
+                <span style="color:#000000;">Meet Your</span>
+                <span style="color:#e91e63;">Hair Care</span><br>
+                <span style="color:#e91e63;">Expert</span>
+            </p>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello, I'm Prateek Rohatgi, a male traditional hair care consultant with over 2 years of experience specializing in natural hair treatments for women using methods passed down through generations.</p>
+                    <p>My approach focuses on traditional techniques using natural ingredients and time-tested methods. I provide convenient home visits and outdoor consultations, bringing personalized hair care solutions directly to you in the comfort of your preferred environment.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-star"></i> Traditional Hair Care Methods</li>
+                        <li><i class="fas fa-leaf"></i> Natural & Herbal Treatments</li>
+                        <li><i class="fas fa-spa"></i> Home Visit Services Available</li>
+                    </ul>
+                    <a href="#contact" class="btn">Schedule Consultation</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000" alt="Prateek Rohatgi - Hair Care Expert">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+     <section id="services" class="services">
+        <div class="container">
+            <p style="font-size:50px; font-weight:bold; line-height:1.2; margin:0;text-align: center;">
+                <span style="color:#000000;">Specialized</span>
+                <span style="color:#e91e63;">Hair Care Services</span><br>
+            </p>
+            <p class="section-subtitle">Comprehensive hair care solutions tailored to address your specific concerns </p>
+            <p style="text-align: center;">with proven treatment methods</p>
+            
+            <div class="service-hours">
+                <p><strong>📞 Booking Hours: Monday-Saturday 8 AM - 9 PM</strong></p>
+                <p><strong>🏠 Service Timings: Sunday 5 PM - 7:30 PM</strong></p>
+            </div>
+            
+            <div class="services-container">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="service-title">Hair Fall Treatment</h3>
+                    <p>Natural hair fall treatment using traditional herbal remedies and time-tested techniques. Available at your home or outdoor location for your convenience.</p>
+                    <ul class="service-features">
+                        <li>Natural hair assessment</li>
+                        <li>Herbal oil treatments</li>
+                        <li>Traditional massage techniques</li>
+                        <li>Home remedies guidance</li>
+                    </ul>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="service-title">Dandruff Solutions</h3>
+                    <p>Traditional dandruff treatments using natural ingredients like neem, lemon, and herbal oils. Gentle yet effective solutions brought to your preferred location.</p>
+                    <ul class="service-features">
+                        <li>Natural scalp cleansing</li>
+                        <li>Herbal anti-dandruff treatments</li>
+                        <li>Natural maintenance tips</li>
+                        <li>DIY remedy recipes</li>
+                    </ul>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="service-title">Split Ends Repair</h3>
+                    <p>Traditional split ends treatment using natural oils and ancient hair care methods. Nourishing treatments that restore hair strength and prevent future damage.</p>
+                    <ul class="service-features">
+                        <li>Natural hair assessment</li>
+                        <li>Oil-based treatments</li>
+                        <li>Traditional conditioning</li>
+                        <li>Natural prevention methods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Banner -->
+    <section class="package-banner">
+        <div class="container">
+            <h2>Complete Traditional Hair Care Package</h2>
+            <p>Full natural hair consultation with traditional treatments at your home or preferred outdoor location</p>
+            <p>Book Mon-Sat 8 AM - 9 PM | Services Sun 5 PM - 7:30 PM</p>
+            <a href="#contact" class="btn">Book Complete Package 💬</a>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <p style="font-size:50px; font-weight:bold; line-height:1.2; margin:0;text-align: center;">
+                <span style="color:#000000;">Service</span>
+                <span style="color:#e91e63;">Packages</span><br>
+            </p>
+            <p class="section-subtitle">Choose the perfect hair care package that suits your needs and budget.</p>
+            <p style="text-align: center;">All services include traditional treatments at your preferred location.</p>
+            <div class="packages-container">
+                <div class="package">
+                    <div class="package-header">
+                        <h3>Monthly Care</h3>
+                        <div class="package-price">₹100</div>
+                        <p>4 Sundays</p>
+                        <p>+ Transportation charges on home visits</p>
+                    </div>
+                    <ul class="package-features">
+                        <li>Professional head massage</li>
+                        <li>Split ends removal treatment</li>
+                        <li>Complete hair care consultation</li>
+                        <li>Natural herbal treatments</li>
+                        <li>Home visit or outdoor sessions</li>
+                    </ul>
+                    <a href="#contact" class="btn">Select Monthly Package</a>
+                </div>
+                
+                <div class="package popular">
+                    <div class="popular-label">Most Popular</div>
+                    <div class="package-header">
+                        <h3>Yearly Care</h3>
+                        <div class="package-price">₹1,000</div>
+                        <p>All Sundays & Holidays</p>
+                        <p>+ Transportation charges on home visits</p>
+                    </div>
+                    <ul class="package-features">
+                        <li>All Monthly package benefits</li>
+                        <li>Comprehensive hair health tracking</li>
+                        <li>Progress monitoring & reports</li>
+                        <li>Holiday special treatments</li>
+                        <li>Personalized hair care routine</li>
+                        <li>Priority booking & scheduling</li>
+                    </ul>
+                    <a href="#contact" class="btn">Select Yearly Package</a>
+                </div>
+                
+                <div class="package">
+                    <div class="package-header">
+                        <h3>Lifetime Care</h3>
+                        <div class="package-price">₹3,000</div>
+                        <p>Become a Regular Client</p>
+                        <p>+ Transportation charges on home visits</p>
+                    </div>
+                    <ul class="package-features">
+                        <li>All Yearly package benefits</li>
+                        <li>Remote consultation services</li>
+                        <li>Professional hair mask application</li>
+                        <li>Online hair health discussions</li>
+                        <li>24/7 hair care support</li>
+                        <li>Exclusive VIP treatments</li>
+                        <li>Lifetime hair wellness plan</li>
+                    </ul>
+                    <a href="#contact" class="btn">Select Lifetime Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <p style="font-size:50px; font-weight:bold; line-height:1.2; margin:0;text-align: center;">Why Choose Our Service Packages?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Book at your convenience</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Natural Treatments</h3>
+                    <p>100% herbal & traditional</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Personalized Care</h3>
+                    <p>Tailored to your hair type</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <h3>Expert Service</h3>
+                    <p>2+ years of experience</p>
+                </div>
+            </div>
+            <p class="features-footer">
+                <strong>Home Visits Available | Outdoor Consultations | Remote Support</strong>
+            </p>
+            <a href="#contact" class="btn features-btn">Get Started Today 😊</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <p style="font-size:50px; font-weight:bold; line-height:1.2; margin:0;text-align: center;">
+                <span style="color:#000000;">Treatment</span>
+                <span style="color:#e91e63;">Portfolio</span><br>
+            </p>
+            <p class="section-subtitle">Witness the transformation journey of our clients through professional hair care treatments</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Outdoor Consultation">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Outdoor Consultation</h3>
+                        <p>Peaceful outdoor settings providing relaxed environment for hair health consultations</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Traditional Hair Assessment">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Traditional Hair Assessment</h3>
+                        <p>Natural hair evaluation in comfortable outdoor settings using traditional methods</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1390&q=80" alt="Beautiful Hair Results">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Beautiful Hair Results</h3>
+                        <p>Stunning results achieved through traditional natural hair care treatments</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Natural Environment">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Natural Environment</h3>
+                        <p>Open air consultations in beautiful natural settings for enhanced relaxation</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Natural Hair Care Products">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Natural Hair Care Products</h3>
+                        <p>Premium herbal oils and natural ingredients used in traditional treatments</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1387&q=80" alt="Home Visit Services">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Home Visit Services</h3>
+                        <p>Convenient at-home consultations bringing professional care to your doorstep</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Portfolio Section -->
+    <section id="video-portfolio" class="video-portfolio">
+        <div class="container">
+            <p style="font-size:50px; font-weight:bold; line-height:1.2; margin:0;text-align: center;">
+                <span style="color:#000000;">Video</span>
+                <span style="color:#e91e63;">Portfolio</span><br>
+            </p>
+            <p class="section-subtitle">Watch our hair transformation videos and see the amazing results</p>
+            
+            <div class="video-grid" id="video-gallery">
+                <!-- Videos will be dynamically loaded here -->
+            </div>
+            
+            <!-- Admin Section (Hidden by default) -->
+            <div class="admin-section" id="admin-section">
+                <h3>Admin Video Management</h3>
+                <p>Add or remove videos from the portfolio</p>
+                
+                <div class="upload-btn-wrapper">
+                    <button class="upload-btn">Upload New Video</button>
+                    <input type="file" id="video-upload" accept="video/*" />
+                </div>
+                
+                <div class="upload-status" id="upload-status"></div>
+                
+                <div id="video-management">
+                    <h4>Manage Existing Videos</h4>
+                    <div id="video-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <p style="font-size:50px; font-weight:bold; line-height:1.2; margin:0;text-align: center;">
+                <span style="color:#000000;">Client</span>
+                <span style="color:#e91e63;">Success Stories</span><br>
+            </p>
+            <p class="section-subtitle">Read what our satisfied clients say about their hair transformation journey</p>
+            
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Prateek's traditional home visit completely transformed my hair fall problem. His natural herbal treatments reduced my hair fall by 80% in just 2 months. The convenience of home service was amazing!"
+                    </div>
+                    <div class="testimonial-author">- Sanya Sharma</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "I loved having Prateek come to my home for dandruff treatment. His natural remedies using neem and lemon completely eliminated my dandruff in 6 weeks. No more salon visits needed!"
+                    </div>
+                    <div class="testimonial-author">- Priya Gupta</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "The outdoor consultation in my garden was so relaxing! Prateek's traditional oil treatments for split ends saved my long hair. His natural methods work wonders."
+                    </div>
+                    <div class="testimonial-author">- Anjali Verma</div>
+                </div>
+            </div>
+            
+            <div class="testimonial-button">
+                <a href="#contact" class="btn">Start Your Transformation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <p style="font-size:50px; font-weight:bold; line-height:1.2; margin:0;text-align: center;">
+                <span style="color:#000000;">Ready to Transform</span>
+                <span style="color:#e91e63;">Your Hair?</span><br>
+            </p>
+            <p class="section-subtitle">Book your consultation today and take the first step towards healthier, more</p>
+            <p style="text-align: center;">beautiful hair</p>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="consultation-form">
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" class="form-control" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" class="form-control" placeholder="Enter your last name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consultation-type">Consultation Type *</label>
+                            <select id="consultation-type" class="form-control" required>
+                                <option value="">Select consultation type</option>
+                                <option value="home">Home Visit Consultation</option>
+                                <option value="outdoor">Outdoor Consultation</option>
+                                <option value="remote">Remote Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hair-concern">Hair Concern *</label>
+                            <select id="hair-concern" class="form-control" required>
+                                <option value="">Select your primary concern</option>
+                                <option value="hair-fall">Hair Fall</option>
+                                <option value="dandruff">Dandruff</option>
+                                <option value="split-ends">Split Ends</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Additional Details</label>
+                            <textarea id="details" class="form-control" placeholder="Tell us about your hair concerns, preferred timing, and any special requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Book Your Consultation</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Call for Consultation</strong><br>
+                                +91 96505 95941
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email Consultation</strong><br>
+                                rohatgiprateek2014@gmail.com
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Service Hours</strong><br>
+                                Booking: Mon-Sat 8 AM - 9 PM<br>
+                                Service: Sun 5 PM - 7:30 PM
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Prateek Rohatgi</h3>
+                    <p>Traditional hair care consultant bringing natural treatments to your doorstep. Helping women achieve healthy, beautiful hair through time-tested methods and home visit services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-services">
+                        <li>Traditional Hair Fall Treatment</li>
+                        <li>Natural Dandruff Solutions</li>
+                        <li>Herbal Split Ends Repair</li>
+                        <li>Traditional Scalp Massage</li>
+                        <li>Home Visit Hair Consultation</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-phone"></i> +91 9650595941</li>
+                        <li><i class="fas fa-envelope"></i> rohatgiprateek2014@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 10 AM - 7 PM</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Serving Delhi Area</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Prateek Rohatgi Hair Care Consultant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.getElementById('consultation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your booking request! We will contact you shortly to confirm your consultation.');
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animated counter for stats section - Fixed to run for ~2 seconds with plus sign
+        function animateCounter() {
+            const counters = document.querySelectorAll('.stat-number');
+            const duration = 2000; // 2 seconds in milliseconds
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const startTime = Date.now();
+                const startValue = 0;
+                
+                function updateCounter() {
+                    const currentTime = Date.now();
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+                    
+                    // Easing function for smooth animation
+                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                    const currentValue = Math.floor(startValue + (target - startValue) * easeOutQuart);
+                    
+                    // Add plus sign to the number
+                    counter.innerText = currentValue + '+';
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target + '+'; // Ensure exact target value with plus sign
+                    }
+                }
+                
+                updateCounter();
+            });
+        }
+
+        // Intersection Observer to trigger animation when stats section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe the stats section
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Video Management System
+        const VIDEO_STORAGE_KEY = 'haircare_videos';
+        
+        // Sample video data
+        const sampleVideos = [
+            {
+                id: 1,
+                title: "Hair Transformation Journey",
+                description: "Watch this amazing hair transformation using our traditional methods",
+                thumbnail: "https://images.unsplash.com/photo-1595476108010-b4d1f102b59b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+            },
+            {
+                id: 2,
+                title: "Traditional Head Massage",
+                description: "Experience our traditional head massage technique",
+                thumbnail: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+            }
+        ];
+        
+        // Initialize video storage if empty
+        function initVideoStorage() {
+            if (!localStorage.getItem(VIDEO_STORAGE_KEY)) {
+                localStorage.setItem(VIDEO_STORAGE_KEY, JSON.stringify(sampleVideos));
+            }
+            return JSON.parse(localStorage.getItem(VIDEO_STORAGE_KEY));
+        }
+        
+        // Get all videos
+        function getVideos() {
+            return initVideoStorage();
+        }
+        
+        // Add a new video
+        function addVideo(title, description, thumbnail, videoUrl) {
+            const videos = getVideos();
+            const newVideo = {
+                id: Date.now(), // Simple ID generation
+                title,
+                description,
+                thumbnail,
+                videoUrl
+            };
+            
+            videos.push(newVideo);
+            localStorage.setItem(VIDEO_STORAGE_KEY, JSON.stringify(videos));
+            return newVideo;
+        }
+        
+        // Remove a video
+        function removeVideo(id) {
+            let videos = getVideos();
+            videos = videos.filter(video => video.id !== id);
+            localStorage.setItem(VIDEO_STORAGE_KEY, JSON.stringify(videos));
+        }
+        
+        // Render videos to the gallery
+        function renderVideos() {
+            const videoGallery = document.getElementById('video-gallery');
+            const videos = getVideos();
+            
+            videoGallery.innerHTML = '';
+            
+            if (videos.length === 0) {
+                videoGallery.innerHTML = '<p class="section-subtitle">No videos available yet. Check back soon!</p>';
+                return;
+            }
+            
+            videos.forEach(video => {
+                const videoItem = document.createElement('div');
+                videoItem.className = 'video-item';
+                videoItem.innerHTML = `
+                    <div class="video-container">
+                        <video controls poster="${video.thumbnail}">
+                            <source src="${video.videoUrl}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-content">
+                        <h3>${video.title}</h3>
+                        <p>${video.description}</p>
+                    </div>
+                `;
+                videoGallery.appendChild(videoItem);
+            });
+        }
+        
+        // Render admin video list
+        function renderAdminVideoList() {
+            const videoList = document.getElementById('video-list');
+            const videos = getVideos();
+            
+            videoList.innerHTML = '';
+            
+            videos.forEach(video => {
+                const videoElement = document.createElement('div');
+                videoElement.className = 'video-admin-item';
+                videoElement.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-radius: 5px;">
+                        <div>
+                            <strong>${video.title}</strong>
+                            <p style="margin: 5px 0; font-size: 14px;">${video.description}</p>
+                        </div>
+                        <button class="btn" style="padding: 8px 15px; background: #ff4757;" onclick="deleteVideo(${video.id})">Delete</button>
+                    </div>
+                `;
+                videoList.appendChild(videoElement);
+            });
+        }
+        
+        // Delete video function
+        function deleteVideo(id) {
+            if (confirm('Are you sure you want to delete this video?')) {
+                removeVideo(id);
+                renderVideos();
+                renderAdminVideoList();
+            }
+        }
+        
+        // Handle video upload
+        document.getElementById('video-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            // Check if file is a video
+            if (!file.type.startsWith('video/')) {
+                document.getElementById('upload-status').textContent = 'Please select a video file.';
+                return;
+            }
+            
+            document.getElementById('upload-status').textContent = 'Uploading video...';
+            
+            // In a real implementation, this would upload to a server
+            // For this demo, we'll simulate an upload process
+            setTimeout(() => {
+                // Create a thumbnail (in a real implementation, this would be generated from the video)
+                const thumbnail = 'https://images.unsplash.com/photo-1595476108010-b4d1f102b59b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80';
+                
+                // Add the video to our storage
+                addVideo(
+                    file.name.replace(/\.[^/.]+$/, ""), // Remove file extension for title
+                    'New uploaded video',
+                    thumbnail,
+                    URL.createObjectURL(file) // This creates a temporary local URL
+                );
+                
+                // Update the gallery
+                renderVideos();
+                renderAdminVideoList();
+                
+                // Update status
+                document.getElementById('upload-status').textContent = 'Video uploaded successfully!';
+                
+                // Clear the file input
+                e.target.value = '';
+            }, 1500);
+        });
+        
+        // Admin access functions
+        function openAdminModal() {
+            document.getElementById('admin-modal').style.display = 'flex';
+        }
+        
+        function closeAdminModal() {
+            document.getElementById('admin-modal').style.display = 'none';
+            document.getElementById('admin-password').value = '';
+            document.getElementById('admin-login-status').textContent = '';
+        }
+        
+        function checkAdminPassword() {
+            const password = document.getElementById('admin-password').value;
+            // In a real implementation, this would be a secure server-side check
+            if (password === 'admin123') { // Default password for demo
+                enableAdminMode();
+                closeAdminModal();
+            } else {
+                document.getElementById('admin-login-status').textContent = 'Incorrect password. Try again.';
+            }
+        }
+        
+        function enableAdminMode() {
+            document.getElementById('admin-section').style.display = 'block';
+            renderAdminVideoList();
+            
+            // Add admin indicator
+            const adminIndicator = document.createElement('div');
+            adminIndicator.style.position = 'fixed';
+            adminIndicator.style.top = '10px';
+            adminIndicator.style.right = '10px';
+            adminIndicator.style.background = '#4CAF50';
+            adminIndicator.style.color = 'white';
+            adminIndicator.style.padding = '5px 10px';
+            adminIndicator.style.borderRadius = '4px';
+            adminIndicator.style.zIndex = '10000';
+            adminIndicator.style.fontSize = '14px';
+            adminIndicator.textContent = 'Admin Mode Active';
+            document.body.appendChild(adminIndicator);
+            
+            // Add disable button
+            const disableAdminBtn = document.createElement('button');
+            disableAdminBtn.textContent = 'Exit Admin Mode';
+            disableAdminBtn.className = 'btn';
+            disableAdminBtn.style.position = 'fixed';
+            disableAdminBtn.style.top = '50px';
+            disableAdminBtn.style.right = '10px';
+            disableAdminBtn.style.zIndex = '10000';
+            disableAdminBtn.style.padding = '8px 15px';
+            disableAdminBtn.style.fontSize = '12px';
+            disableAdminBtn.onclick = function() {
+                document.getElementById('admin-section').style.display = 'none';
+                adminIndicator.remove();
+                disableAdminBtn.remove();
+            };
+            document.body.appendChild(disableAdminBtn);
+        }
+        
+        // Secret access methods
+        function checkUrlForAdminAccess() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('admin') === 'true') {
+                enableAdminMode();
+            }
+        }
+        
+        function setupKeyboardShortcut() {
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+Shift+A to enable admin mode
+                if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+                    e.preventDefault();
+                    enableAdminMode();
+                }
+            });
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderVideos();
+            setupKeyboardShortcut();
+            checkUrlForAdminAccess();
+            
+            // Set up admin access button
+            document.getElementById('admin-access-btn').addEventListener('click', openAdminModal);
+        });
+    </script>
+</body>
+</html>
