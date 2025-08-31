@@ -93,7 +93,7 @@
         header {
             background-color: white;
             padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow:   2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -428,7 +428,7 @@
             background: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(极力0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             text-align: center;
             padding: 0 0 30px 0;
             margin-bottom: 30px;
@@ -633,6 +633,7 @@
             line-height: 1.5;
         }
         
+        /* Admin Section Styles */
         .admin-section {
             background: white;
             padding: 30px;
@@ -643,6 +644,240 @@
             display: none; /* Hidden by default */
         }
         
+        .admin-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .admin-tab {
+            padding: 12px 20px;
+            background: #f5f5f5;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .admin-tab.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .admin-tab-content {
+            display: none;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .admin-tab-content.active {
+            display: block;
+        }
+        
+        /* Hair Guide Styles */
+        .hair-guide-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .hair-guide-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .hair-guide-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .hair-guide-card h3 {
+            color: #e91e63;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hair-guide-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .hair-guide-card ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .hair-guide-card ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .hair-guide-card ul li:before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* Customer Management Styles */
+        .customer-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .customer-filters input, .customer-filters select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .customer-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .customer-table th, .customer-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .customer-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .customer-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Appointment Styles */
+        .calendar-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        
+        .calendar-day {
+            padding: 10px;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .calendar-day:hover {
+            background: #f0f0f0;
+        }
+        
+        .calendar-day.selected {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .appointment-list {
+            margin-top: 20px;
+        }
+        
+        .appointment-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .appointment-details {
+            flex: 1;
+        }
+        
+        .appointment-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        /* Payment Styles */
+        .payment-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .payment-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .payment-card h3 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .payment-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .payment-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .payment-stat {
+            text-align: center;
+        }
+        
+        .payment-stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .payment-stat-label {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        /* Upload Styles */
         .upload-btn-wrapper {
             position: relative;
             overflow: hidden;
@@ -1097,6 +1332,14 @@
             .form-responses {
                 overflow-x: auto;
             }
+            
+            .hair-guide-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-cards {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1149,6 +1392,19 @@
             }
             
             .crud-actions {
+                flex-direction: column;
+            }
+            
+            .admin-tabs {
+                flex-direction: column;
+            }
+            
+            .admin-tab {
+                margin-bottom: 5px;
+                border-radius: 5px;
+            }
+            
+            .customer-filters {
                 flex-direction: column;
             }
         }
@@ -1526,7 +1782,7 @@
                 
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Natural Environment">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Natural Environment">
                     </div>
                     <div class="portfolio-content">
                         <h3>Natural Environment</h3>
@@ -1572,25 +1828,248 @@
             
             <!-- Admin Section (Hidden by default) -->
             <div class="admin-section" id="admin-section">
-                <h3>Admin Video Management</h3>
-                <p>Add or remove videos from the portfolio</p>
+                <h3>Admin Dashboard</h3>
                 
-                <div class="upload-btn-wrapper">
-                    <button class="upload-btn">Upload New Video</button>
-                    <input type="file" id="video-upload" accept="video/*" />
+                <div class="admin-tabs">
+                    <div class="admin-tab active" data-tab="hair-guide">Hair Care Guide</div>
+                    <div class="admin-tab" data-tab="customers">Customer Management</div>
+                    <div class="admin-tab" data-tab="appointments">Appointments</div>
+                    <div class="admin-tab" data-tab="payments">Payments</div>
+                    <div class="admin-tab" data-tab="videos">Video Management</div>
+                    <div class="admin-tab" data-tab="responses">Form Responses</div>
                 </div>
                 
-                <div class="upload-status" id="upload-status"></div>
-                
-                <div id="video-management">
-                    <h4>Manage Existing Videos</h4>
-                    <div id="video-list"></div>
+                <!-- Hair Care Guide Tab -->
+                <div class="admin-tab-content active" id="hair-guide">
+                    <h3>Natural Hair Care Specialist's Comprehensive Guide</h3>
+                    <div class="hair-guide-container">
+                        <div class="hair-guide-card" style="background: linear-gradient(135deg, #ffe6f0, #ffccdc);">
+                            <h3><i class="fas fa-fall-down"></i> Hairfall (Hair Loss)</h3>
+                            <ul>
+                                <li><strong>Root Cause:</strong> Weak follicles, nutrient deficiency, stress, hormonal imbalance, or scalp inflammation.</li>
+                                <li><strong>General Protocol:</strong> Scalp massage with rosemary oil, protein-rich diet, aloe vera treatments</li>
+                                <li><strong>By Length:</strong> Short: Focus on scalp; Long: Apply oils only to scalp</li>
+                                <li><strong>By Texture:</strong> Straight: Light oils; Curly: Rich oils like castor oil</li>
+                                <li><strong>By Scalp Type:</strong> Oily: Aloe vera; Dry: Overnight coconut oil</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="hair-guide-card" style="background: linear-gradient(135deg, #d2f5ff, #c6e0ff);">
+                            <h3><i class="fas fa-snowflake"></i> Dandruff</h3>
+                            <ul>
+                                <li><strong>Root Cause:</strong> Fungal overgrowth, dry scalp, or product buildup.</li>
+                                <li><strong>General Protocol:</strong> Tea tree oil treatments, ACV rinse, neem oil masks</li>
+                                <li><strong>By Length:</strong> Short: Direct application; Long: Section hair for treatment</li>
+                                <li><strong>By Texture:</strong> Straight: Avoid heavy oils; Curly: Neem water spray</li>
+                                <li><strong>By Scalp Type:</strong> Oily: ACV rinse; Dry: Coconut oil & honey mask</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="hair-guide-card" style="background: linear-gradient(135deg, #ffeeb7, #fffead);">
+                            <h3><i class="fas fa-cut"></i> Split Ends</h3>
+                            <ul>
+                                <li><strong>Root Cause:</strong> Physical wear and tear, lack of moisture, chemical damage.</li>
+                                <li><strong>General Protocol:</strong> Regular trims, seal ends with argan oil, protective masks</li>
+                                <li><strong>By Length:</strong> Short: Light oil; Long: Protective styles, silk pillowcases</li>
+                                <li><strong>By Texture:</strong> Straight: Lightweight serums; Curly: Rich butters</li>
+                                <li><strong>By Scalp Type:</strong> Focus is entirely on the ends of the hair</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="hair-guide-card" style="background: linear-gradient(135deg, #e6ffe6, #ccffcc);">
+                            <h3><i class="fas fa-user-clock"></i> Premature Greying</h3>
+                            <ul>
+                                <li><strong>Root Cause:</strong> Genetics, oxidative stress, nutrient deficiencies</li>
+                                <li><strong>General Protocol:</strong> Amla treatments, copper-rich diet, onion juice application</li>
+                                <li><strong>By Length:</strong> Short/Medium: Focus on scalp; Long: Amla-rich hair mask</li>
+                                <li><strong>By Texture:</strong> Straight: Amla water rinses; Curly: Amla powder in masks</li>
+                                <li><strong>By Scalp Type:</strong> Oily: Amla water; Normal/Dry: Amla oil massages</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="hair-guide-card" style="background: linear-gradient(135deg, #ffe6cc, #ffd9b3);">
+                            <h3><i class="fas fa-tint"></i> Dryness</h3>
+                            <ul>
+                                <li><strong>Root Cause:</strong> Lack of moisture and/or natural oils to seal in moisture.</li>
+                                <li><strong>General Protocol:</strong> Banana-avocado-honey mask, pre-shampoo oiling, rice water rinses</li>
+                                <li><strong>By Length:</strong> Short: Healthy scalp; Long: Hydrate mid-lengths and ends</li>
+                                <li><strong>By Texture:</strong> Straight: Light humectants; Curly: Shea butter, L.O.C. method</li>
+                                <li><strong>By Scalp Type:</strong> Oily scalp with dry ends: Condition from ears down</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Form Responses Section -->
-                <div class="form-responses">
-                    <h4>Consultation Form Responses</h4>
-                    <div id="responses-table-container"></div>
+                <!-- Customer Management Tab -->
+                <div class="admin-tab-content" id="customers">
+                    <h3>Customer Management</h3>
+                    
+                    <div class="customer-filters">
+                        <input type="text" id="customer-search" placeholder="Search customers..." class="form-control">
+                        <select id="customer-filter" class="form-control">
+                            <option value="all">All Customers</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="package">Package Customers</option>
+                        </select>
+                        <button class="btn" onclick="addNewCustomer()">Add New Customer</button>
+                    </div>
+                    
+                    <table class="customer-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Package</th>
+                                <th>Last Visit</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customer-table-body">
+                            <!-- Customer data will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Appointments Tab -->
+                <div class="admin-tab-content" id="appointments">
+                    <h3>Appointment Management</h3>
+                    
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="btn" onclick="prevMonth()">← Prev</button>
+                            <h3 id="current-month">September 2025</h3>
+                            <button class="btn" onclick="nextMonth()">Next →</button>
+                        </div>
+                        
+                        <div class="calendar-grid" id="calendar-days">
+                            <!-- Calendar days will be generated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-list">
+                        <h3>Appointments for <span id="selected-date">Today</span></h3>
+                        <div id="appointment-items">
+                            <!-- Appointments will be listed here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payments Tab -->
+                <div class="admin-tab-content" id="payments">
+                    <h3>Payment Management</h3>
+                    
+                    <div class="payment-cards">
+                        <div class="payment-card">
+                            <h3><i class="fas fa-money-bill-wave"></i> Total Revenue</h3>
+                            <div class="payment-stat-value">₹12,450</div>
+                            <div class="payment-stats">
+                                <div class="payment-stat">
+                                    <div class="payment-stat-value">₹8,200</div>
+                                    <div class="payment-stat-label">This Month</div>
+                                </div>
+                                <div class="payment-stat">
+                                    <div class="payment-stat-value">₹4,250</div>
+                                    <div class="payment-stat-label">Last Month</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <h3><i class="fas fa-users"></i> Customer Stats</h3>
+                            <div class="payment-stat-value">48 Clients</div>
+                            <div class="payment-stats">
+                                <div class="payment-stat">
+                                    <div class="payment-stat-value">32</div>
+                                    <div class="payment-stat-label">Active</div>
+                                </div>
+                                <div class="payment-stat">
+                                    <div class="payment-stat-value">16</div>
+                                    <div class="payment-stat-label">Package</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <h3><i class="fas fa-calendar-check"></i> Appointments</h3>
+                            <div class="payment-stat-value">24 This Week</div>
+                            <div class="payment-stats">
+                                <div class="payment-stat">
+                                    <div class="payment-stat-value">18</div>
+                                    <div class="payment-stat-label">Confirmed</div>
+                                </div>
+                                <div class="payment-stat">
+                                    <div class="payment-stat-value">6</div>
+                                    <div class="payment-stat-label">Pending</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <h3>Recent Transactions</h3>
+                        <table class="customer-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30 Aug 2025</td>
+                                    <td>Priya Sharma</td>
+                                    <td>Yearly Package</td>
+                                    <td>₹1,000</td>
+                                    <td><span style="color: #4CAF50;">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>29 Aug 2025</td>
+                                    <td>Anjali Verma</td>
+                                    <td>Hair Fall Treatment</td>
+                                    <td>₹500</td>
+                                    <td><span style="color: #4CAF50;">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>28 Aug 2025</td>
+                                    <td>Sanya Gupta</td>
+                                    <td>Monthly Package</td>
+                                    <td>₹100</td>
+                                    <td><span style="color: #ff9800;">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Video Management Tab -->
+                <div class="admin-tab-content" id="videos">
+                    <h3>Video Management</h3>
+                    <p>Add or remove videos from the portfolio</p>
+                    
+                    <div class="upload-btn-wrapper">
+                        <button class="upload-btn">Upload New Video</button>
+                        <input type="file" id="video-upload" accept="video/*" />
+                    </div>
+                    
+                    <div class="upload-status" id="upload-status"></div>
+                    
+                    <div id="video-management">
+                        <h4>Manage Existing Videos</h4>
+                        <div id="video-list"></div>
+                    </div>
+                </div>
+                
+                <!-- Form Responses Tab -->
+                <div class="admin-tab-content" id="responses">
+                    <h3>Consultation Form Responses</h3>
+                    <div class="form-responses">
+                        <div id="responses-table-container"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1608,19 +2087,19 @@
             <div class="testimonial-container">
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        "Prateek's traditional home visit completely transformed my hair fall problem. His natural herbal treatments reduced my hair fall by 80% in just 2 months. The convenience of home service was amazing!"
+                        <p style="text-align: justify;">"Prateek's traditional home visit completely transformed my hair fall problem. His natural herbal treatments reduced my hair fall by 80% in just 2 months. The convenience of home service was amazing!"</p>
                     </div>
                     <div class="testimonial-author">- Sanya Sharma</div>
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        "I loved having Prateek come to my home for dandruff treatment. His natural remedies using neem and lemon completely eliminated my dandruff in 6 weeks. No more salon visits needed!"
+                        <p style="text-align: justify;">"I loved having Prateek come to my home for dandruff treatment. His natural remedies using neem and lemon completely eliminated my dandruff in 6 weeks. No more salon visits needed!"</p>
                     </div>
                     <div class="testimonial-author">- Priya Gupta</div>
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        "The outdoor consultation in my garden was so relaxing! Prateek's traditional oil treatments for split ends saved my long hair. His natural methods work wonders."
+                        <p style="text-align: justify;">"The outdoor consultation in natural environment was so relaxing! Initially I was feeling anxious but as Prateek started traditional oil treatment and removal of my split ends I felt amazing as it saved my long hair. His natural methods work wonders."</p>
                     </div>
                     <div class="testimonial-author">- Anjali Verma</div>
                 </div>
@@ -1828,6 +2307,8 @@
         // Storage keys
         const VIDEO_STORAGE_KEY = 'haircare_videos';
         const FORM_RESPONSES_KEY = 'haircare_form_responses';
+        const CUSTOMERS_KEY = 'haircare_customers';
+        const APPOINTMENTS_KEY = 'haircare_appointments';
         
         // Sample video data
         const sampleVideos = [
@@ -1847,6 +2328,71 @@
             }
         ];
         
+        // Sample customer data
+        const sampleCustomers = [
+            {
+                id: 1,
+                firstName: "Priya",
+                lastName: "Sharma",
+                phone: "+91 9876543210",
+                email: "priya.sharma@example.com",
+                package: "Yearly Care",
+                lastVisit: "2025-08-30",
+                status: "active"
+            },
+            {
+                id: 2,
+                firstName: "Anjali",
+                lastName: "Verma",
+                phone: "+91 9876543211",
+                email: "anjali.verma@example.com",
+                package: "Monthly Care",
+                lastVisit: "2025-08-28",
+                status: "active"
+            },
+            {
+                id: 3,
+                firstName: "Sanya",
+                lastName: "Gupta",
+                phone: "+91 9876543212",
+                email: "sanya.gupta@example.com",
+                package: "Lifetime Care",
+                lastVisit: "2025-08-25",
+                status: "active"
+            }
+        ];
+        
+        // Sample appointment data
+        const sampleAppointments = [
+            {
+                id: 1,
+                customerId: 1,
+                customerName: "Priya Sharma",
+                date: "2025-09-05",
+                time: "17:00",
+                service: "Hair Fall Treatment",
+                status: "confirmed"
+            },
+            {
+                id: 2,
+                customerId: 2,
+                customerName: "Anjali Verma",
+                date: "2025-09-05",
+                time: "18:00",
+                service: "Dandruff Solutions",
+                status: "confirmed"
+            },
+            {
+                id: 3,
+                customerId: 3,
+                customerName: "Sanya Gupta",
+                date: "2025-09-12",
+                time: "17:30",
+                service: "Split Ends Repair",
+                status: "pending"
+            }
+        ];
+        
         // Initialize storage if empty
         function initStorage(key, defaultValue) {
             if (!localStorage.getItem(key)) {
@@ -1863,6 +2409,16 @@
         // Get all form responses
         function getFormResponses() {
             return initStorage(FORM_RESPONSES_KEY, []);
+        }
+        
+        // Get all customers
+        function getCustomers() {
+            return initStorage(CUSTOMERS_KEY, sampleCustomers);
+        }
+        
+        // Get all appointments
+        function getAppointments() {
+            return initStorage(APPOINTMENTS_KEY, sampleAppointments);
         }
         
         // Save form responses
@@ -1974,6 +2530,135 @@
                     </div>
                 `;
                 videoList.appendChild(videoElement);
+            });
+        }
+        
+        // Render customers table
+        function renderCustomers() {
+            const customerTableBody = document.getElementById('customer-table-body');
+            const customers = getCustomers();
+            
+            customerTableBody.innerHTML = '';
+            
+            customers.forEach(customer => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${customer.firstName} ${customer.lastName}</td>
+                    <td>${customer.phone}<br>${customer.email}</td>
+                    <td>${customer.package}</td>
+                    <td>${customer.lastVisit}</td>
+                    <td><span style="color: #4CAF50;">${customer.status}</span></td>
+                    <td>
+                        <div class="crud-actions">
+                            <button class="edit-btn" onclick="editCustomer(${customer.id})">Edit</button>
+                            <button class="delete-btn" onclick="deleteCustomer(${customer.id})">Delete</button>
+                        </div>
+                    </td>
+                `;
+                customerTableBody.appendChild(row);
+            });
+        }
+        
+        // Render appointments calendar
+        function renderCalendar() {
+            const calendarDays = document.getElementById('calendar-days');
+            const currentDate = new Date();
+            const currentMonthElement = document.getElementById('current-month');
+            
+            // Set current month text
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            currentMonthElement.textContent = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+            
+            // Clear previous calendar
+            calendarDays.innerHTML = '';
+            
+            // Add day headers
+            const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            dayNames.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.style.fontWeight = 'bold';
+                dayElement.textContent = day;
+                calendarDays.appendChild(dayElement);
+            });
+            
+            // Add empty cells for days before the first day of the month
+            const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
+            for (let i = 0; i < firstDay; i++) {
+                const emptyElement = document.createElement('div');
+                calendarDays.appendChild(emptyElement);
+            }
+            
+            // Add days of the month
+            const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+            for (let i = 1; i <= daysInMonth; i++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = i;
+                
+                // Check if this day has appointments
+                const dateStr = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+                const appointments = getAppointmentsForDate(dateStr);
+                
+                if (appointments.length > 0) {
+                    dayElement.style.background = '#ffe6cc';
+                    dayElement.style.fontWeight = 'bold';
+                }
+                
+                if (i === currentDate.getDate()) {
+                    dayElement.classList.add('selected');
+                    renderAppointmentsForDate(dateStr);
+                }
+                
+                dayElement.addEventListener('click', function() {
+                    document.querySelectorAll('.calendar-day').forEach(day => day.classList.remove('selected'));
+                    this.classList.add('selected');
+                    renderAppointmentsForDate(dateStr);
+                });
+                
+                calendarDays.appendChild(dayElement);
+            }
+        }
+        
+        // Get appointments for a specific date
+        function getAppointmentsForDate(dateStr) {
+            const appointments = getAppointments();
+            return appointments.filter(appt => appt.date === dateStr);
+        }
+        
+        // Render appointments for a specific date
+        function renderAppointmentsForDate(dateStr) {
+            const appointmentItems = document.getElementById('appointment-items');
+            const selectedDateElement = document.getElementById('selected-date');
+            const appointments = getAppointmentsForDate(dateStr);
+            
+            // Format date for display
+            const date = new Date(dateStr);
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            selectedDateElement.textContent = date.toLocaleDateString('en-US', options);
+            
+            appointmentItems.innerHTML = '';
+            
+            if (appointments.length === 0) {
+                appointmentItems.innerHTML = '<p>No appointments scheduled for this date.</p>';
+                return;
+            }
+            
+            appointments.forEach(appt => {
+                const appointmentElement = document.createElement('div');
+                appointmentElement.className = 'appointment-item';
+                appointmentElement.innerHTML = `
+                    <div class="appointment-details">
+                        <strong>${appt.customerName}</strong>
+                        <p>${appt.time} - ${appt.service}</p>
+                    </div>
+                    <div class="appointment-actions">
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                `;
+                appointmentItems.appendChild(appointmentElement);
             });
         }
         
@@ -2188,6 +2873,33 @@
             }
         });
         
+        // Admin tab switching
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and contents
+                document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+                
+                // Load data for the tab if needed
+                if (tabId === 'customers') {
+                    renderCustomers();
+                } else if (tabId === 'appointments') {
+                    renderCalendar();
+                } else if (tabId === 'responses') {
+                    renderFormResponses();
+                } else if (tabId === 'videos') {
+                    renderAdminVideoList();
+                }
+            });
+        });
+        
         // Admin access functions
         function openAdminModal() {
             document.getElementById('admin-modal').style.display = 'flex';
@@ -2213,6 +2925,8 @@
             document.getElementById('admin-section').style.display = 'block';
             renderAdminVideoList();
             renderFormResponses();
+            renderCustomers();
+            renderCalendar();
             
             // Add admin indicator
             const adminIndicator = document.createElement('div');
@@ -2246,6 +2960,33 @@
             };
             disableAdminBtn.id = 'disable-admin-btn';
             document.body.appendChild(disableAdminBtn);
+        }
+        
+        // Calendar navigation
+        function prevMonth() {
+            // Implementation for previous month navigation
+            alert('Previous month navigation would be implemented here');
+        }
+        
+        function nextMonth() {
+            // Implementation for next month navigation
+            alert('Next month navigation would be implemented here');
+        }
+        
+        // Customer management functions
+        function addNewCustomer() {
+            alert('Add new customer functionality would be implemented here');
+        }
+        
+        function editCustomer(id) {
+            alert(`Edit customer ${id} functionality would be implemented here`);
+        }
+        
+        function deleteCustomer(id) {
+            if (confirm('Are you sure you want to delete this customer?')) {
+                alert(`Customer ${id} would be deleted here`);
+                renderCustomers();
+            }
         }
         
         // Secret access methods
